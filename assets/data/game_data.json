@@ -1,0 +1,129 @@
+{
+  "characters": [
+    {
+      "id": "dj_gal",
+      "name": "DJギャル",
+      "description": "パリピでノリ重視！テンション高めの返しが刺さる",
+      "color": "#FF69B4",
+      "weights": {
+        "sad": {"empathy": 1.0, "acceptance": 0.8, "question": 0.6, "encourage": 1.2, "celebrate": 0.4, "suggest": 0.5, "tsukkomi": 1.5, "meme": 1.8, "logic": 0.2, "close": 1.0},
+        "happy": {"empathy": 1.0, "acceptance": 0.8, "question": 0.6, "encourage": 1.0, "celebrate": 1.8, "suggest": 0.5, "tsukkomi": 1.2, "meme": 1.5, "logic": 0.3, "close": 1.2},
+        "consult": {"empathy": 0.8, "acceptance": 1.0, "question": 1.2, "encourage": 1.0, "celebrate": 0.3, "suggest": 1.5, "tsukkomi": 0.8, "meme": 0.5, "logic": 0.6, "close": 0.8},
+        "vent": {"empathy": 1.5, "acceptance": 1.2, "question": 0.5, "encourage": 0.8, "celebrate": 0.2, "suggest": 0.4, "tsukkomi": 1.0, "meme": 0.8, "logic": 0.3, "close": 1.0}
+      }
+    },
+    {
+      "id": "idol",
+      "name": "アイドル",
+      "description": "キラキラ癒し系！共感と応援が得意",
+      "color": "#FFB6C1",
+      "weights": {
+        "sad": {"empathy": 1.8, "acceptance": 1.5, "question": 0.8, "encourage": 1.5, "celebrate": 0.3, "suggest": 0.8, "tsukkomi": 0.3, "meme": 0.4, "logic": 0.5, "close": 1.2},
+        "happy": {"empathy": 1.2, "acceptance": 1.0, "question": 0.8, "encourage": 1.2, "celebrate": 1.8, "suggest": 0.6, "tsukkomi": 0.5, "meme": 0.6, "logic": 0.4, "close": 1.5},
+        "consult": {"empathy": 1.5, "acceptance": 1.2, "question": 1.0, "encourage": 1.2, "celebrate": 0.4, "suggest": 1.0, "tsukkomi": 0.3, "meme": 0.3, "logic": 0.8, "close": 1.0},
+        "vent": {"empathy": 1.8, "acceptance": 1.5, "question": 0.6, "encourage": 1.0, "celebrate": 0.2, "suggest": 0.5, "tsukkomi": 0.2, "meme": 0.3, "logic": 0.4, "close": 1.2}
+      }
+    },
+    {
+      "id": "denpa",
+      "name": "電波ちゃん",
+      "description": "不思議系ミーム使い！予測不能な返しが魅力",
+      "color": "#9370DB",
+      "weights": {
+        "sad": {"empathy": 0.8, "acceptance": 0.6, "question": 1.2, "encourage": 0.8, "celebrate": 0.5, "suggest": 0.8, "tsukkomi": 1.0, "meme": 1.8, "logic": 0.8, "close": 0.6},
+        "happy": {"empathy": 0.6, "acceptance": 0.5, "question": 1.0, "encourage": 0.8, "celebrate": 1.2, "suggest": 0.6, "tsukkomi": 1.2, "meme": 1.8, "logic": 0.5, "close": 0.8},
+        "consult": {"empathy": 0.6, "acceptance": 0.8, "question": 1.5, "encourage": 0.6, "celebrate": 0.3, "suggest": 1.2, "tsukkomi": 0.8, "meme": 1.2, "logic": 1.5, "close": 0.5},
+        "vent": {"empathy": 1.0, "acceptance": 0.8, "question": 1.0, "encourage": 0.6, "celebrate": 0.3, "suggest": 0.6, "tsukkomi": 1.5, "meme": 1.5, "logic": 0.8, "close": 0.4}
+      }
+    }
+  ],
+  "prompts": [
+    {"id": "sad_1", "tag": "sad", "text": "今日、上司にめっちゃ怒られた...", "recommend": ["empathy", "acceptance", "encourage", "suggest"]},
+    {"id": "sad_2", "tag": "sad", "text": "好きな人にフラれちゃった", "recommend": ["empathy", "acceptance", "encourage", "close"]},
+    {"id": "sad_3", "tag": "sad", "text": "テスト全然できなかった...", "recommend": ["empathy", "acceptance", "encourage", "suggest"]},
+    {"id": "sad_4", "tag": "sad", "text": "友達と喧嘩しちゃって", "recommend": ["empathy", "question", "acceptance", "suggest"]},
+    {"id": "sad_5", "tag": "sad", "text": "最近なんかうまくいかないなあ", "recommend": ["empathy", "acceptance", "question", "encourage"]},
+    {"id": "happy_1", "tag": "happy", "text": "やったー！推しのライブ当選した！", "recommend": ["celebrate", "empathy", "question", "close"]},
+    {"id": "happy_2", "tag": "happy", "text": "昇進決まったよ！", "recommend": ["celebrate", "empathy", "question", "encourage"]},
+    {"id": "happy_3", "tag": "happy", "text": "彼氏できたの♡", "recommend": ["celebrate", "question", "empathy", "close"]},
+    {"id": "happy_4", "tag": "happy", "text": "ダイエット成功！5kg痩せた！", "recommend": ["celebrate", "empathy", "question", "encourage"]},
+    {"id": "happy_5", "tag": "happy", "text": "念願のゲーム機やっと買えた！", "recommend": ["celebrate", "empathy", "question", "meme"]},
+    {"id": "consult_1", "tag": "consult", "text": "転職しようか迷ってるんだよね", "recommend": ["question", "empathy", "suggest", "acceptance"]},
+    {"id": "consult_2", "tag": "consult", "text": "告白するタイミングがわからない", "recommend": ["question", "empathy", "suggest", "encourage"]},
+    {"id": "consult_3", "tag": "consult", "text": "親との関係がうまくいかなくて", "recommend": ["empathy", "question", "acceptance", "suggest"]},
+    {"id": "consult_4", "tag": "consult", "text": "将来のこと考えると不安で", "recommend": ["empathy", "acceptance", "question", "encourage"]},
+    {"id": "consult_5", "tag": "consult", "text": "副業始めたいんだけど何がいいかな", "recommend": ["question", "suggest", "empathy", "encourage"]},
+    {"id": "vent_1", "tag": "vent", "text": "隣の席の人がうるさすぎる", "recommend": ["empathy", "acceptance", "tsukkomi", "suggest"]},
+    {"id": "vent_2", "tag": "vent", "text": "電車遅延でバイト遅刻した最悪", "recommend": ["empathy", "acceptance", "tsukkomi", "encourage"]},
+    {"id": "vent_3", "tag": "vent", "text": "親がいちいちうるさいんだよね", "recommend": ["empathy", "acceptance", "question", "tsukkomi"]},
+    {"id": "vent_4", "tag": "vent", "text": "課金しすぎて金欠...", "recommend": ["empathy", "tsukkomi", "acceptance", "suggest"]},
+    {"id": "vent_5", "tag": "vent", "text": "SNSで変なコメントつけられた", "recommend": ["empathy", "acceptance", "tsukkomi", "encourage"]}
+  ],
+  "responseBank": [
+    {"id": "emp_1", "type": "empathy", "text": "それはつらいね...", "fit": "good"},
+    {"id": "emp_2", "type": "empathy", "text": "わかるわかる〜", "fit": "good"},
+    {"id": "emp_3", "type": "empathy", "text": "大変だったね", "fit": "good"},
+    {"id": "emp_4", "type": "empathy", "text": "気持ちわかるよ", "fit": "good"},
+    {"id": "emp_5", "type": "empathy", "text": "それは落ち込むよね", "fit": "good"},
+    {"id": "acc_1", "type": "acceptance", "text": "うんうん", "fit": "neutral"},
+    {"id": "acc_2", "type": "acceptance", "text": "そっか〜", "fit": "neutral"},
+    {"id": "acc_3", "type": "acceptance", "text": "なるほどね", "fit": "neutral"},
+    {"id": "acc_4", "type": "acceptance", "text": "へぇ〜", "fit": "neutral"},
+    {"id": "acc_5", "type": "acceptance", "text": "ふむふむ", "fit": "neutral"},
+    {"id": "que_1", "type": "question", "text": "それでどうしたの？", "fit": "good"},
+    {"id": "que_2", "type": "question", "text": "詳しく聞かせて？", "fit": "good"},
+    {"id": "que_3", "type": "question", "text": "いつからそうなの？", "fit": "good"},
+    {"id": "que_4", "type": "question", "text": "何があったの？", "fit": "good"},
+    {"id": "que_5", "type": "question", "text": "どう思ってる？", "fit": "good"},
+    {"id": "enc_1", "type": "encourage", "text": "きっと大丈夫だよ！", "fit": "good"},
+    {"id": "enc_2", "type": "encourage", "text": "応援してるよ！", "fit": "good"},
+    {"id": "enc_3", "type": "encourage", "text": "頑張って！", "fit": "good"},
+    {"id": "enc_4", "type": "encourage", "text": "君ならできるよ！", "fit": "good"},
+    {"id": "enc_5", "type": "encourage", "text": "ファイト！", "fit": "good"},
+    {"id": "cel_1", "type": "celebrate", "text": "おめでとう！！", "fit": "good"},
+    {"id": "cel_2", "type": "celebrate", "text": "すごいじゃん！", "fit": "good"},
+    {"id": "cel_3", "type": "celebrate", "text": "やったね！", "fit": "good"},
+    {"id": "cel_4", "type": "celebrate", "text": "最高〜！", "fit": "good"},
+    {"id": "cel_5", "type": "celebrate", "text": "さすが！", "fit": "good"},
+    {"id": "sug_1", "type": "suggest", "text": "こうしてみたら？", "fit": "good"},
+    {"id": "sug_2", "type": "suggest", "text": "〇〇がいいかも", "fit": "good"},
+    {"id": "sug_3", "type": "suggest", "text": "一回休んでみたら？", "fit": "good"},
+    {"id": "sug_4", "type": "suggest", "text": "誰かに相談してみたら", "fit": "good"},
+    {"id": "sug_5", "type": "suggest", "text": "リフレッシュしよ！", "fit": "good"},
+    {"id": "tsu_1", "type": "tsukkomi", "text": "それはあかんやつw", "fit": "neutral"},
+    {"id": "tsu_2", "type": "tsukkomi", "text": "草", "fit": "neutral"},
+    {"id": "tsu_3", "type": "tsukkomi", "text": "まじかよw", "fit": "neutral"},
+    {"id": "tsu_4", "type": "tsukkomi", "text": "ウケるw", "fit": "neutral"},
+    {"id": "tsu_5", "type": "tsukkomi", "text": "やばいねw", "fit": "neutral"},
+    {"id": "mem_1", "type": "meme", "text": "それな（激しく同意）", "fit": "neutral"},
+    {"id": "mem_2", "type": "meme", "text": "ワンチャンある", "fit": "neutral"},
+    {"id": "mem_3", "type": "meme", "text": "優勝〜", "fit": "neutral"},
+    {"id": "mem_4", "type": "meme", "text": "尊い...", "fit": "neutral"},
+    {"id": "mem_5", "type": "meme", "text": "推せる", "fit": "neutral"},
+    {"id": "log_1", "type": "logic", "text": "でも現実的に考えると...", "fit": "bad"},
+    {"id": "log_2", "type": "logic", "text": "それは自業自得では？", "fit": "bad"},
+    {"id": "log_3", "type": "logic", "text": "計画性がないからでしょ", "fit": "bad"},
+    {"id": "log_4", "type": "logic", "text": "もっと考えてから動けば", "fit": "bad"},
+    {"id": "log_5", "type": "logic", "text": "前にも言ったよね？", "fit": "bad"},
+    {"id": "clo_1", "type": "close", "text": "私がいるから大丈夫♡", "fit": "good"},
+    {"id": "clo_2", "type": "close", "text": "一緒にいよう", "fit": "good"},
+    {"id": "clo_3", "type": "close", "text": "話してくれて嬉しい", "fit": "good"},
+    {"id": "clo_4", "type": "close", "text": "力になりたいな", "fit": "good"},
+    {"id": "clo_5", "type": "close", "text": "いつでも頼って！", "fit": "good"}
+  ],
+  "mineResponses": [
+    {"id": "mine_sad_meme", "type": "meme", "forTag": "sad", "text": "ドンマイw", "fit": "bad"},
+    {"id": "mine_sad_cel", "type": "celebrate", "forTag": "sad", "text": "それは良かったね！", "fit": "bad"},
+    {"id": "mine_happy_emp", "type": "empathy", "forTag": "happy", "text": "それはつらいね...", "fit": "bad"},
+    {"id": "mine_happy_log", "type": "logic", "forTag": "happy", "text": "調子乗ると痛い目見るよ", "fit": "bad"},
+    {"id": "mine_consult_meme", "type": "meme", "forTag": "consult", "text": "知らんけどw", "fit": "bad"},
+    {"id": "mine_consult_log", "type": "logic", "forTag": "consult", "text": "自分で決めなよ", "fit": "bad"},
+    {"id": "mine_vent_cel", "type": "celebrate", "forTag": "vent", "text": "おめでとう！", "fit": "bad"},
+    {"id": "mine_vent_log", "type": "logic", "forTag": "vent", "text": "それは君も悪いでしょ", "fit": "bad"}
+  ],
+  "bgmList": [
+    {"id": "bgm_1", "name": "Pop Vibes", "bpm": 120, "duration": 60, "file": "bgm_placeholder.mp3"},
+    {"id": "bgm_2", "name": "Chill Wave", "bpm": 100, "duration": 60, "file": "bgm_placeholder.mp3"},
+    {"id": "bgm_3", "name": "Hyper Beat", "bpm": 140, "duration": 60, "file": "bgm_placeholder.mp3"}
+  ]
+}

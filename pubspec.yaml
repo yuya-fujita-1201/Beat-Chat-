@@ -1,0 +1,28 @@
+name: beat_chat
+description: "Beat Chat - A casual rhythm conversation game"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_riverpod: ^2.6.1
+  just_audio: ^0.9.46
+  audioplayers: ^6.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/data/
+    - assets/audio/
+    - assets/images/
